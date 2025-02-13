@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with Share Icon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 600px;
+        }
+        .card img {
+            width: 200px;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-content h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .card-content p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .author {
+            display: flex;
+            align-items: center;
+        }
+        .author img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .share-icon {
+            cursor: pointer;
+        }
+        .share-icon img {
+            width: 24px; /* Updated size */
+            height: 24px; /* Updated size */
+        }
+        .share-options {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-top: 10px;
+            right: 0;
+        }
+        .share-options a {
+            display: block;
+            padding: 5px 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .share-options a:hover {
+            background-color: #f0f4f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="images/drawers.jpg" alt="Green dresser with vase">
+        <div class="card-content">
+            <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+            <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
+            <div class="card-footer">
+                <div class="author">
+                    <img src="images/avatar-michelle.jpg" alt="Michelle Appleton">
+                    <div>
+                        <p>Michelle Appleton</p>
+                        <p>28 Jun 2020</p>
+                    </div>
+                </div>
+                <div class="share-icon" onclick="toggleShareOptions()">
+                    <img src="images/favicon-32x32.png" alt="Share icon">
+                </div>
+                <div class="share-options" id="share-options">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleShareOptions() {
+            const shareOptions = document.getElementById('share-options');
+            if (shareOptions.style.display === 'block') {
+                shareOptions.style.display = 'none';
+            } else {
+                shareOptions.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
